@@ -1,11 +1,19 @@
+import MascotaCard from "./components/MascotaCard";
 import { mascotas } from "./data/mascotas";
-import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <h1>🐾 AdoptaPet</h1>
-      <p>Se importaron {mascotas.length} mascotas desde el archivo de datos.</p>
+    <div>
+      <h1>AdoptaPet</h1>
+
+      <MascotaCard
+        nombre={mascotas[0].nombre}
+        raza={mascotas[0].raza}
+        edad={mascotas[0].edad}
+        especie={mascotas[0].especie}
+        descripcion={mascotas[0].descripcion}
+        caracteristicas={mascotas[0].caracteristicas}
+      />
     </div>
   );
 }
