@@ -16,6 +16,21 @@
     padding-left: 20px;
 }
 
+.badge {
+    display: inline-block;
+    background-color: #ff3b30;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card.urgente {
+    border: 3px solid #ff3b30;
+    transform: translateY(-4px);
+}
+
 /* Perro */
 .perro{
     background-color: #64B5F6;

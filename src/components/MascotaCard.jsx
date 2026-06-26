@@ -8,16 +8,27 @@ function MascotaCard({
   especie,
   descripcion,
   caracteristicas,
+  adopcionUrgente,
 }) {
+  const claseCard = `card ${especie.toLowerCase()}${adopcionUrgente ? " urgente" : ""}`;
+
   return (
-    <div className={`card ${especie.toLowerCase()}`}>
+    <div className={claseCard}>
       <h2>{nombre}</h2>
 
-      <p><strong>Raza:</strong> {raza}</p>
+      {adopcionUrgente && <p className="badge">¡Adopción urgente!</p>}
 
-      <p><strong>Edad:</strong> {edad} años</p>
+      <p>
+        <strong>Raza:</strong> {raza}
+      </p>
 
-      <p><strong>Especie:</strong> {especie}</p>
+      <p>
+        <strong>Edad:</strong> {edad} años
+      </p>
+
+      <p>
+        <strong>Especie:</strong> {especie}
+      </p>
 
       <p>{descripcion}</p>
 
@@ -39,6 +50,7 @@ MascotaCard.propTypes = {
   especie: PropTypes.string,
   descripcion: PropTypes.string,
   caracteristicas: PropTypes.arrayOf(PropTypes.string),
+  adopcionUrgente: PropTypes.bool,
 };
 
 MascotaCard.defaultProps = {
@@ -48,6 +60,7 @@ MascotaCard.defaultProps = {
   especie: "Otro",
   descripcion: "Sin descripción",
   caracteristicas: [],
+  adopcionUrgente: false,
 };
 
 export default MascotaCard;

@@ -11,8 +11,6 @@ function FiltroEspecie({
 
       {/* 🔎 BUSCADOR BONITO */}
       <div className="buscador">
-        <span className="icono">🔎</span>
-
         <input
           type="text"
           placeholder="Buscar una mascota por nombre..."
@@ -36,10 +34,10 @@ function FiltroEspecie({
         value={especie}
         onChange={(e) => setEspecie(e.target.value)}
       >
-        <option value="Todas">🐾 Todas</option>
-        <option value="Perro">🐶 Perro</option>
-        <option value="Gato">🐱 Gato</option>
-        <option value="Otro">🦜 Otro</option>
+        <option value="Todas">Todas</option>
+        <option value="Perro">Perro</option>
+        <option value="Gato">Gato</option>
+        <option value="Otro">Otro</option>
       </select>
 
     </div>

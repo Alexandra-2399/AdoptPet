@@ -17,9 +17,14 @@ function App() {
     return coincideEspecie && coincideNombre;
   });
 
+  const urgentes = mascotas.filter((m) => m.adopcionUrgente).length;
+
   return (
-    <div>
+    <div className="container">
       <h1>🐾 AdoptaPet</h1>
+      <p className="counter">
+        Adopciones urgentes: <strong>{urgentes}</strong>
+      </p>
 
       {/* FILTROS */}
       <FiltroEspecie
