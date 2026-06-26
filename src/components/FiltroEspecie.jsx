@@ -1,20 +1,47 @@
-function FiltroEspecie({ filtro, setFiltro }) {
-  const opciones = ["Todas", "Perro", "Gato", "Otro"];
+import "./FiltroEspecie.css";
 
+function FiltroEspecie({
+  especie,
+  setEspecie,
+  busqueda,
+  setBusqueda,
+}) {
   return (
-    <div>
-      <label htmlFor="filtro-especie">Filtrar por especie:</label>
+    <div className="filtros-container">
+
+      {/* 🔎 BUSCADOR BONITO */}
+      <div className="buscador">
+        <span className="icono">🔎</span>
+
+        <input
+          type="text"
+          placeholder="Buscar una mascota por nombre..."
+          value={busqueda}
+          onChange={(e) => setBusqueda(e.target.value)}
+        />
+
+        {busqueda && (
+          <button
+            className="clear-btn"
+            onClick={() => setBusqueda("")}
+          >
+            ✕
+          </button>
+        )}
+      </div>
+
+      {/* 🐾 SELECT MEJORADO */}
       <select
-        id="filtro-especie"
-        value={filtro}
-        onChange={(e) => setFiltro(e.target.value)}
+        className="select-especie"
+        value={especie}
+        onChange={(e) => setEspecie(e.target.value)}
       >
-        {opciones.map((opcion) => (
-          <option key={opcion} value={opcion}>
-            {opcion}
-          </option>
-        ))}
+        <option value="Todas">🐾 Todas</option>
+        <option value="Perro">🐶 Perro</option>
+        <option value="Gato">🐱 Gato</option>
+        <option value="Otro">🦜 Otro</option>
       </select>
+
     </div>
   );
 }

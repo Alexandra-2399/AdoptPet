@@ -1,0 +1,54 @@
+.filtros-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap; /* para que no se rompa en pantallas pequeñas */
+}
+
+/* 🔎 BUSCADOR */
+.buscador {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px 14px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  transition: 0.2s;
+}
+
+.buscador:focus-within {
+  background: #e9e9e9;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* 🔎 icono */
+.icono {
+  margin-right: 8px;
+}
+
+/* ✕ botón limpiar */
+.clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 🐾 SELECT */
+.select-especie {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
